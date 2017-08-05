@@ -1,8 +1,15 @@
 apply plugin: 'application'
 
+repositories {
+    maven {
+        url "http://dl.bintray.com/heapy/heap"
+    }
+}
+
 dependencies {
     compile project(':core')
     compile("io.undertow:undertow-core:$undertow_version")
+    compile("by.heap.undertow.http.client:undertow-http-client:0.0.4")
 }
 
 mainClassName = "fund.cyber.markets.connectors.ConnectorsApplicationKt"
